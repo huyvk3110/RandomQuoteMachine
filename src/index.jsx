@@ -14,6 +14,7 @@ class App extends Component {
         }
 
         this.onClickNew = this.onClickNew.bind(this);
+        this.onClickTweet = this.onClickTweet.bind(this);
     }
 
     componentDidMount() {
@@ -43,6 +44,10 @@ class App extends Component {
         this.randomQuote();
     }
 
+    onClickTweet() {
+        window.open(`https://twitter.com/intent/tweet?text=${this.state.data.quote}`);
+    }
+
     render() {
         const { data } = this.state;
 
@@ -51,6 +56,7 @@ class App extends Component {
                 <p id="text"><i className="fa fa-quote-left"></i> {(data && data.quote) || ''}</p>
                 <p id="author">{`- ${(data && data.author) || ''}`}</p>
                 <div className="btn-lay">
+                    <a className="btn btn-info" onClick={this.onClickTweet} id="tweet-quote"><i className="fa fa-twitter"></i></a>
                     <a className="btn" onClick={this.onClickNew} id="new-quote">New quote</a>
                 </div>
             </div>

@@ -33,6 +33,11 @@ body {
     color: white;
 }
 
+#tweet-quote {
+    color: white;
+    background-color: #1da1f2;
+}
+
 #writter {
     display: block;
     color: white;
@@ -46,4 +51,12 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: right;
+}
+
+.btn-lay .btn {
+    margin-left: 10px;
+}
+
+.btn-lay .btn:hover {
+    cursor: pointer;
 }
